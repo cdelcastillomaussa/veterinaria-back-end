@@ -24,6 +24,8 @@ public class Veterinaria implements Serializable {
     private String ds_ciudad;
     private String ds_direccion;
     private String ds_telefono;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp ds_fecha_registro;
 
     @JsonIgnore
@@ -33,7 +35,7 @@ public class Veterinaria implements Serializable {
         ds_especie = rs.getString("ds_especie");
         ds_raza = rs.getString("ds_raza");
         ds_fecha_nac = rs.getDate("ds_fecha_nac");
-        ds_tipo_id_dueno = rs.getString("ds_tipo_dueno");
+        ds_tipo_id_dueno = rs.getString("ds_tipo_id_dueno");
         ds_id_dueno = rs.getString("ds_id_dueno");
         ds_nombre_dueno = rs.getString("ds_nombre_dueno");
         ds_ciudad = rs.getString("ds_ciudad");

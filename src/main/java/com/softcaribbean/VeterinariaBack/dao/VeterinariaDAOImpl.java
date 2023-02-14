@@ -4,10 +4,11 @@ import com.softcaribbean.VeterinariaBack.dto.Veterinaria;
 import com.softcaribbean.VeterinariaBack.mapper.VeterinariaMapper;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
-
+@Repository
 public class VeterinariaDAOImpl implements VeterinariaDAO {
 
     private static final String INSERT = "INSERT INTO paciente (nmid, ds_nombre_paciente, ds_especie, ds_raza, ds_fecha_nac, ds_tipo_id_dueno, ds_id_dueno, ds_nombre_dueno, ds_ciudad, ds_direccion, ds_telefono, ds_fecha_registro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
