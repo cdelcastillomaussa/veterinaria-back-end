@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 @Service
 @Transactional
-public class DuenoServiceImpl implements DuenoService{
+public class DuenoServiceImpl implements DuenoService {
 
     private final Logger log = LoggerFactory.getLogger(PacienteServiceImpl.class);
     private final DuenoDAO duenoDAO;

@@ -1,7 +1,6 @@
 package com.softcaribbean.VeterinariaBack.dao;
 
 import com.softcaribbean.VeterinariaBack.dto.Dueno;
-import com.softcaribbean.VeterinariaBack.dto.Paciente;
 
 import java.util.List;
 

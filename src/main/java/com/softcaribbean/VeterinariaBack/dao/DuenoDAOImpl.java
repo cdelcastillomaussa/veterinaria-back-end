@@ -4,11 +4,13 @@ import com.softcaribbean.VeterinariaBack.dto.Dueno;
 import com.softcaribbean.VeterinariaBack.mapper.DuenoMapper;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 
 import javax.sql.DataSource;
 import java.util.List;
 
+@Repository
 public class DuenoDAOImpl implements DuenoDAO{
 
     private static final String INSERT = "INSERT INTO dueno (nmid, ds_tipo_id_dueno, ds_id_dueno, ds_nombre_dueno, ds_ciudad, ds_direccion, ds_telefono, ds_fecha_ingreso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
