@@ -1,6 +1,7 @@
 package com.softcaribbean.VeterinariaBack.mapper;
 
 import com.softcaribbean.VeterinariaBack.dto.Paciente;
+import com.softcaribbean.VeterinariaBack.util.UtilDate;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -16,7 +17,7 @@ public class PacienteMapper implements RowMapper<Paciente> {
         entity.setDs_nombre_paciente(rs.getString("ds_nombre_paciente"));
         entity.setDs_especie(rs.getString("ds_especie"));
         entity.setDs_raza(rs.getString("ds_raza"));
-        entity.setDs_fecha_nac(rs.getDate("ds_fecha_nac"));
+        entity.setDs_fecha_nac(UtilDate.getLocalDate(rs.getDate("ds_fecha_nac")));
         entity.setPacienteFromRs(rs);
         return entity;
     }

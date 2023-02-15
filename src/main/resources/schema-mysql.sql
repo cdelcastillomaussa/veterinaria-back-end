@@ -7,7 +7,7 @@
         ds_ciudad varchar(20),
         ds_direccion varchar(65),
         ds_telefono varchar(10),
-        ds_fecha_registro timestamp not null,
+        ds_fecha_registro timestamp,
         PRIMARY KEY (nmid)
   );
 

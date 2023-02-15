@@ -13,8 +13,8 @@ import java.util.List;
 @Repository
 public class DuenoDAOImpl implements DuenoDAO{
 
-    private static final String INSERT = "INSERT INTO dueno (nmid, ds_tipo_id_dueno, ds_id_dueno, ds_nombre_dueno, ds_ciudad, ds_direccion, ds_telefono, ds_fecha_ingreso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE = "UPDATE dueno SET ds_tipo_id_dueno=?, ds_id_dueno=?, ds_nombre_dueno=?, ds_ciudad=?, ds_direccion=?, ds_telefono=?, ds_fecha_ingreso=? WHERE nmid=?";
+    private static final String INSERT = "INSERT INTO dueno (nmid, ds_tipo_id_dueno, ds_id_dueno, ds_nombre_dueno, ds_ciudad, ds_direccion, ds_telefono, ds_fecha_registro) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    private static final String UPDATE = "UPDATE dueno SET ds_tipo_id_dueno=?, ds_id_dueno=?, ds_nombre_dueno=?, ds_ciudad=?, ds_direccion=?, ds_telefono=?, ds_fecha_registro=NOW() WHERE nmid=?";
     private static final String SELECT = "SELECT * FROM dueno";
     private static final String SELECTBYID = SELECT + " WHERE nmid = ?";
 
